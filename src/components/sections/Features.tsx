@@ -1,36 +1,36 @@
 import { motion } from "framer-motion";
-import { Zap, Shield, MapPin, Feather, Wrench, Heart } from "lucide-react";
+import { Zap, Shield, Bike, Feather, Wrench, Ruler } from "lucide-react";
 
 const features = [
   {
     icon: Feather,
-    title: "21 kg seulement",
-    description: "Le vélo cargo le plus léger d'Europe. Facile à manier, à ranger et à transporter.",
+    title: "Léger : 17,6 à 24,6 kg",
+    description: "Plus léger que la plupart des vélos cargos. Franchissez des marches, prenez l'ascenseur ou le train sans effort.",
   },
   {
-    icon: Zap,
-    title: "Moteur Bafang",
-    description: "Assistance électrique puissante jusqu'à 25 km/h avec une autonomie de 80 km.",
+    icon: Bike,
+    title: "Mini mais costaud",
+    description: "50 kg de charge à l'arrière, 15 kg à l'avant. Transportez enfants, courses, chien ou matériel professionnel.",
   },
   {
-    icon: Shield,
-    title: "Charge 100 kg",
-    description: "Transportez enfants, courses ou matériel professionnel en toute sécurité.",
+    icon: Ruler,
+    title: "Compact et maniable",
+    description: "Roues 20\", guidon orientable pour le stationnement. Taille unique pour cyclistes de 1,45 m à 1,90 m.",
   },
   {
     icon: Wrench,
-    title: "100% réparable",
-    description: "Pièces standard disponibles partout. Conçu pour durer des décennies.",
+    title: "Réparable à l'infini",
+    description: "Composants 100% standards. Pas d'interface propriétaire, pas d'appli. Obsolescence déprogrammée.",
   },
   {
-    icon: MapPin,
-    title: "Made in Annecy",
-    description: "Assemblé dans nos ateliers au pied des Alpes. Qualité française garantie.",
+    icon: Zap,
+    title: "Assistance électrique",
+    description: "Moteur Virvolt avec capteur de couple. Batterie format gourde amovible en 2 secondes.",
   },
   {
-    icon: Heart,
-    title: "Écologique",
-    description: "Zéro émission, matériaux durables, économie circulaire intégrée.",
+    icon: Shield,
+    title: "Cadre acier Cro-Mo",
+    description: "Cadre en acier made in Europe. Fourche suspendue pour le confort du cycliste et du chargement.",
   },
 ];
 
@@ -66,13 +66,13 @@ const Features = () => {
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
-            Pourquoi Simplix
+            L'extrême simplisme vu par Oklö
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Conçu pour la <span className="text-primary">vraie vie</span>
+            Facile, costaud, léger, <span className="text-primary">durable</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Un vélo cargo pensé pour simplifier votre quotidien, sans compromis sur la qualité.
+            À l'heure où les vélos cargos sont de plus en plus gros et sophistiqués, Oklö fait le choix de la simplicité.
           </p>
         </motion.div>
 
