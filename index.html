@@ -1,24 +1,56 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Lovable App</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-
-    <!-- TODO: Update og:title to match your application name -->
-    <meta property="og:title" content="Lovable App" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <title>Simplix - Le vélo cargo le plus léger d'Europe | Oklö</title>
+    <meta name="description" content="Simplix, le vélo cargo électrique de 21kg seulement. Le plus léger d'Europe, 100% réparable, fabriqué à Annecy. À partir de 1 190€." />
+    <meta name="keywords" content="vélo cargo, vélo électrique, cargo bike, Annecy, Oklö, Simplix, vélo léger, vélo famille" />
+    <meta name="author" content="Oklö" />
+    
+    <!-- Open Graph / Social -->
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
+    <meta property="og:title" content="Simplix - Le vélo cargo le plus léger d'Europe" />
+    <meta property="og:description" content="21kg seulement. 100% réparable. Fabriqué à Annecy. À partir de 1 190€." />
+    <meta property="og:site_name" content="Oklö" />
+    
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:title" content="Simplix - Le vélo cargo le plus léger d'Europe" />
+    <meta name="twitter:description" content="21kg seulement. 100% réparable. Fabriqué à Annecy." />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://simplix.oklo.bike" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Simplix",
+      "brand": {
+        "@type": "Brand",
+        "name": "Oklö"
+      },
+      "description": "Le vélo cargo électrique le plus léger d'Europe. 21kg seulement, 100% réparable, fabriqué à Annecy.",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "1190",
+        "availability": "https://schema.org/InStock",
+        "priceValidUntil": "2025-12-31"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "2000"
+      }
+    }
+    </script>
   </head>
-
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
