@@ -3,17 +3,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Check, ChevronDown, ChevronUp, ShoppingCart, Info } from "lucide-react";
 
-// Import accessory images
-import panierCityCargo from "@/assets/accessories/panier-city-cargo.webp";
-import caissePlastiqueBasil from "@/assets/accessories/caisse-plastique-basil.webp";
-import panierPourChien from "@/assets/accessories/panier-pour-chien.webp";
-import sacocheBaSilShopperBag from "@/assets/accessories/sacoche-basil-shopper-bag.webp";
-import topcaseCitybox from "@/assets/accessories/topcase-citybox.webp";
-import ensembleCoussinPareJupe from "@/assets/accessories/ensemble-coussin-pare-jupe.webp";
-import gardeCorpsArriere from "@/assets/accessories/garde-corps-arriere.webp";
-import antivolAxaFold from "@/assets/accessories/antivol-axa-fold.webp";
-import retroviseurXlc from "@/assets/accessories/retroviseur-xlc.webp";
-import verrouUniklip from "@/assets/accessories/verrou-uniklip.webp";
+// Import accessory images (PNG with transparent backgrounds)
+import panierCityCargo from "@/assets/accessories/panier-city-cargo.png";
+import caissePlastiqueBasil from "@/assets/accessories/caisse-plastique-basil.png";
+import panierPourChien from "@/assets/accessories/panier-pour-chien.png";
+import sacocheBaSilShopperBag from "@/assets/accessories/sacoche-basil-shopper-bag.png";
+import topcaseCitybox from "@/assets/accessories/topcase-citybox.png";
+import ensembleCoussinPareJupe from "@/assets/accessories/ensemble-coussin-pare-jupe.png";
+import gardeCorpsArriere from "@/assets/accessories/garde-corps-arriere.png";
+import antivolAxaFold from "@/assets/accessories/antivol-axa-fold.png";
+import retroviseurXlc from "@/assets/accessories/retroviseur-xlc.png";
+import verrouUniklip from "@/assets/accessories/verrou-uniklip.png";
 
 interface Version {
   id: string;
