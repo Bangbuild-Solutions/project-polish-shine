@@ -32,7 +32,7 @@ const atouts = [
     shortTitle: "Vélo compact",
     title: "Guidon rétractable pour un vélo compact",
     description: "Le guidon orientable à 90° permet de ranger le vélo dans un espace réduit : ascenseur, couloir, coffre de voiture. Simplix mesure seulement 1,66 m de long, contre 2,50 m pour un longtail classique.",
-    highlight: "1,66 m",
+    highlight: "Longueur 1,66 m",
     link: "https://www.oklo.bike/gamme-simplix/atout-simplix-n2-guidon-retractable-pour-un-velo-compact/"
   },
   {
@@ -58,8 +58,8 @@ const atouts = [
     icon: Zap,
     shortTitle: "Assistance",
     title: "Une assistance efficace et légère",
-    description: "Le moteur Virvolt avec capteur de couple offre une assistance naturelle et progressive. La batterie format gourde s'enlève en 2 secondes et se recharge n'importe où. Jusqu'à 80 km d'autonomie.",
-    highlight: "80 km",
+    description: "Le moteur Virvolt avec capteur de couple offre une assistance naturelle et progressive. La batterie format gourde s'enlève en 2 secondes et se recharge n'importe où. Jusqu'à 70 km d'autonomie.",
+    highlight: "70 km",
     link: "https://www.oklo.bike/gamme-simplix/atout-simplix-n5-une-assistance-efficace-et-legere/"
   },
   {
@@ -271,7 +271,7 @@ const Features = () => {
             { label: "Longueur", value: "1,66 m" },
             { label: "Poids min", value: "17,6 kg" },
             { label: "Charge arrière", value: "50 kg" },
-            { label: "Autonomie", value: "80 km" },
+            { label: "Autonomie", value: "70 km" },
             { label: "Tailles", value: "1,45-1,90 m" },
           ].map((stat, index) => (
             <div
