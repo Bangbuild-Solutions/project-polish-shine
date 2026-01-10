@@ -31,8 +31,8 @@ const atouts = [
     icon: Minimize2,
     shortTitle: "Vélo compact",
     title: "Guidon rétractable pour un vélo compact",
-    description: "Le guidon orientable à 90° permet de ranger le vélo dans un espace réduit : ascenseur, couloir, coffre de voiture. Simplix mesure seulement 1,80 m de long, contre 2,50 m pour un longtail classique.",
-    highlight: "1,80 m",
+    description: "Le guidon orientable à 90° permet de ranger le vélo dans un espace réduit : ascenseur, couloir, coffre de voiture. Simplix mesure seulement 1,66 m de long, contre 2,50 m pour un longtail classique.",
+    highlight: "1,66 m",
     link: "https://www.oklo.bike/gamme-simplix/atout-simplix-n2-guidon-retractable-pour-un-velo-compact/"
   },
   {
@@ -268,7 +268,7 @@ const Features = () => {
         >
           {[
             { label: "Roues", value: "20\"" },
-            { label: "Longueur", value: "1,80 m" },
+            { label: "Longueur", value: "1,66 m" },
             { label: "Poids min", value: "17,6 kg" },
             { label: "Charge arrière", value: "50 kg" },
             { label: "Autonomie", value: "80 km" },
