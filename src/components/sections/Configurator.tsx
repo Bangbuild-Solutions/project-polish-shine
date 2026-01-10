@@ -14,6 +14,8 @@ import gardeCorpsArriere from "@/assets/accessories/garde-corps-arriere.png";
 import antivolAxaFold from "@/assets/accessories/antivol-axa-fold.png";
 import retroviseurXlc from "@/assets/accessories/retroviseur-xlc.png";
 import verrouUniklip from "@/assets/accessories/verrou-uniklip.png";
+import dossierPoigneeArriere from "@/assets/accessories/dossier-poignee-arriere.png";
+import bequilleCentraleUrsus from "@/assets/accessories/bequille-centrale-ursus.png";
 
 interface Version {
   id: string;
@@ -154,7 +156,7 @@ const accessories: Accessory[] = [
     price: 85, 
     description: "Confort passager amélioré",
     category: "Confort",
-    image: undefined, // Missing image
+    image: dossierPoigneeArriere,
     specs: ["Petit dossier + poignée", "Encombrement réduit", "Fabriqué en France"],
   },
   { 
@@ -163,7 +165,7 @@ const accessories: Accessory[] = [
     price: 43, 
     description: "Stabilité maximale à l'arrêt",
     category: "Équipement",
-    image: undefined, // Missing image
+    image: bequilleCentraleUrsus,
     specs: ["Double pied", "Position verticale", "Grande stabilité"],
   },
   { 

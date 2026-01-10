@@ -1,30 +1,35 @@
 import { motion } from "framer-motion";
 
+// Press logos
+import frandroidLogo from "@/assets/press/frandroid-logo.png";
+import cleanriderLogo from "@/assets/press/cleanrider-logo.png";
+import weelzLogo from "@/assets/press/weelz-logo.png";
+import transitionVeloLogo from "@/assets/press/transition-velo-logo.png";
+
 const pressLogos = [
   {
     name: "Frandroid",
+    logo: frandroidLogo,
     quote: "Le vélo cargo compact et modulable",
-    url: "https://www.frandroid.com",
+    url: "https://www.frandroid.com/survoltes/velo-electrique/2631953_ce-velo-electrique-francais-est-la-preuve-quun-velo-peut-etre-pratique-et-compact",
   },
   {
     name: "Cleanrider",
+    logo: cleanriderLogo,
     quote: "Un vélo bien pensé et bien construit",
-    url: "https://www.cleanrider.com",
+    url: "https://www.cleanrider.com/catalogue/velo-electrique/oklo/oklo-simplix/",
   },
   {
     name: "Weelz",
+    logo: weelzLogo,
     quote: "La simplicité au service du quotidien",
-    url: "https://www.weelz.fr",
+    url: "https://weelz.ouest-france.fr/oklo-simplix-un-velo-cargo-midtail-gaulois-refractaire-a-la-techno-mais-pas-au-style/",
   },
   {
     name: "Transition Vélo",
+    logo: transitionVeloLogo,
     quote: "Un cargo léger et pratique",
-    url: "https://www.transitionvelo.com",
-  },
-  {
-    name: "Vélo & Territoires",
-    quote: "L'avenir de la mobilité urbaine",
-    url: "https://www.velo-territoires.org",
+    url: "https://www.transitionvelo.com/test/test-oklo-simplix-le-velo-cargo-biplace-simple-compact-et-leger/",
   },
 ];
 
@@ -54,12 +59,12 @@ const Press = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 sm:gap-8"
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8"
         >
-          {pressLogos.map((logo, index) => (
+          {pressLogos.map((press, index) => (
             <motion.a
-              key={logo.name}
-              href={logo.url}
+              key={press.name}
+              href={press.url}
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
@@ -68,16 +73,18 @@ const Press = () => {
               transition={{ duration: 0.4, delay: 0.1 * index }}
               className="group flex flex-col items-center justify-center p-4 sm:p-6 rounded-xl bg-card border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300"
             >
-              {/* Logo Text (grayscale by default, colored on hover) */}
-              <div className="relative mb-3">
-                <span className="text-lg sm:text-xl font-bold text-muted-foreground grayscale group-hover:grayscale-0 group-hover:text-primary transition-all duration-300">
-                  {logo.name}
-                </span>
+              {/* Logo (grayscale by default, colored on hover) */}
+              <div className="relative mb-4 h-12 sm:h-16 w-full flex items-center justify-center">
+                <img
+                  src={press.logo}
+                  alt={`${press.name} logo`}
+                  className="max-h-full max-w-full object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                />
               </div>
               
-              {/* Quote appears on hover */}
-              <p className="text-xs text-center text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-2">
-                "{logo.quote}"
+              {/* Quote - always visible */}
+              <p className="text-xs sm:text-sm text-center text-muted-foreground group-hover:text-foreground transition-colors duration-300 line-clamp-2">
+                "{press.quote}"
               </p>
             </motion.a>
           ))}
