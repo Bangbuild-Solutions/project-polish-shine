@@ -4,11 +4,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 import heroUrbanParents from "@/assets/hero-urban-parents.png";
+import heroCityCreative from "@/assets/hero-city-creative.png";
 import heroWeekendExplorer from "@/assets/hero-weekend-explorer.png";
 
 const heroImages = [
   { src: heroImage, alt: "Simplix mini vélo cargo modulable" },
   { src: heroUrbanParents, alt: "Simplix pour les parents urbains" },
+  { src: heroCityCreative, alt: "Simplix pour les créatifs de la ville" },
   { src: heroWeekendExplorer, alt: "Simplix pour les explorateurs du weekend" },
 ];
 
