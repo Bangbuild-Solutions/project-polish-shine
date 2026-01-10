@@ -14,6 +14,13 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToConfigurator = () => {
+    const element = document.getElementById("configurator");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -51,6 +58,7 @@ const Navbar = () => {
               variant={isScrolled ? "default" : "hero"}
               size="sm"
               className="text-xs sm:text-sm"
+              onClick={scrollToConfigurator}
             >
               Personnaliser
             </Button>

@@ -1,34 +1,72 @@
-import { motion } from "framer-motion";
+import { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import heroUrbanParents from "@/assets/hero-urban-parents.png";
+import heroWeekendExplorer from "@/assets/hero-weekend-explorer.png";
+
+const heroImages = [
+  { src: heroImage, alt: "Simplix mini vélo cargo modulable" },
+  { src: heroUrbanParents, alt: "Simplix pour les parents urbains" },
+  { src: heroWeekendExplorer, alt: "Simplix pour les explorateurs du weekend" },
+];
 
 const Hero = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % heroImages.length);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 5000);
+    return () => clearInterval(interval);
+  }, [nextSlide]);
+
   const scrollToConfigurator = (e: React.MouseEvent) => {
     e.preventDefault();
     const element = document.getElementById("configurator");
     if (element) {
-      const offset = 80; // Account for fixed navbar
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({
-        top: elementPosition - offset,
-        behavior: "smooth"
-      });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image Carousel */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Simplix mini vélo cargo modulable"
-          className="w-full h-full object-cover object-center"
-        />
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={currentIndex}
+            src={heroImages[currentIndex].src}
+            alt={heroImages[currentIndex].alt}
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            className="w-full h-full object-cover object-center absolute inset-0"
+          />
+        </AnimatePresence>
         {/* Gradient Overlays */}
         <div className="absolute inset-0 bg-gradient-to-b from-teal-900/60 via-teal-900/40 to-teal-900/70" />
         <div className="absolute inset-0 bg-gradient-to-r from-teal-900/30 to-transparent" />
+      </div>
+
+      {/* Carousel Indicators */}
+      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+        {heroImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentIndex
+                ? "w-8 bg-gold-400"
+                : "bg-background/50 hover:bg-background/70"
+            }`}
+            aria-label={`Aller à l'image ${index + 1}`}
+          />
+        ))}
       </div>
 
       {/* Content */}
