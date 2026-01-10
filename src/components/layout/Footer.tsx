@@ -1,17 +1,11 @@
 import okloLogo from "@/assets/oklo-logo.svg";
-
 const Footer = () => {
-  return (
-    <footer className="bg-teal-900 text-background py-16">
+  return <footer className="bg-teal-900 text-background py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
-            <img
-              src={okloLogo}
-              alt="Oklö"
-              className="h-10 brightness-0 invert mb-4"
-            />
+            <img src={okloLogo} alt="Oklö" className="h-10 brightness-0 invert mb-4" />
             <p className="text-background/70 text-sm leading-relaxed">
               Vélos cargo légers et réparables, fabriqués à Annecy depuis 2019.
             </p>
@@ -53,9 +47,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-background/10 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-background/50">
-            © 2024 Oklö. Tous droits réservés.
-          </p>
+          <p className="text-sm text-background/50">© 2026 Oklö. Tous droits réservés.</p>
           <div className="flex gap-6 text-sm text-background/50">
             <a href="#" className="hover:text-background transition-colors">Mentions légales</a>
             <a href="#" className="hover:text-background transition-colors">Confidentialité</a>
@@ -63,8 +55,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
