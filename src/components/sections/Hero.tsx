@@ -4,8 +4,17 @@ import { ArrowRight, ChevronDown } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
-  const scrollToConfigurator = () => {
-    document.getElementById("configurator")?.scrollIntoView({ behavior: "smooth" });
+  const scrollToConfigurator = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const element = document.getElementById("configurator");
+    if (element) {
+      const offset = 80; // Account for fixed navbar
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: "smooth"
+      });
+    }
   };
 
   return (
