@@ -108,7 +108,7 @@ const Press = () => {
           </div>
           <div className="text-center">
             <span className="block text-3xl sm:text-4xl font-black text-primary">🏆</span>
-            <span className="text-sm text-muted-foreground">Vélo de l'année 2023</span>
+            <span className="text-sm text-muted-foreground">Vélo cargo de l'année 2024</span>
           </div>
         </motion.div>
       </div>
